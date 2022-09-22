@@ -1,0 +1,703 @@
+# Japanese message catalog for NetworkManager-vpnc
+# Copyright (C) 2006, 2011, 2013, 2020 THE NetworkManager-vpnc's COPYRIGHT HOLDER
+# This file is distributed under the same license as the NetworkManager-vpnc package.
+# Satoru SATOH <ss@gnome.gr.jp>, 2006.
+# Takayoshi OKANO <kano@na.rim.or.jp>, 2011.
+# Hajime Taira <htaira@redhat.com>, 2011, 2013.
+# sicklylife <translation@sicklylife.jp>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: NetworkManager-vpnc master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-vpnc/"
+"issues\n"
+"POT-Creation-Date: 2020-05-04 15:51+0000\n"
+"PO-Revision-Date: 2020-05-07 23:59+0900\n"
+"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../appdata/network-manager-vpnc.metainfo.xml.in.h:1
+msgid "Legacy Cisco VPNC client"
+msgstr ""
+
+#: ../appdata/network-manager-vpnc.metainfo.xml.in.h:2
+msgid "Client for Cisco IPsec virtual private networks"
+msgstr ""
+
+#: ../appdata/network-manager-vpnc.metainfo.xml.in.h:3
+msgid "Support for configuring virtual private networks based on VPNC."
+msgstr ""
+
+#: ../appdata/network-manager-vpnc.metainfo.xml.in.h:4
+msgid "Compatible with Cisco VPN concentrators configured to use IPsec."
+msgstr ""
+
+#: ../appdata/network-manager-vpnc.metainfo.xml.in.h:5
+msgid "The NetworkManager Developers"
+msgstr ""
+
+#: ../auth-dialog/main.c:164 ../auth-dialog/main.c:221
+msgid "Authenticate VPN"
+msgstr "VPN 認証"
+
+#: ../auth-dialog/main.c:178
+msgid "Password"
+msgstr "パスワード"
+
+#: ../auth-dialog/main.c:186
+msgid "Group Password"
+msgstr "グループパスワード"
+
+#: ../auth-dialog/main.c:230
+msgid "_Group Password:"
+msgstr "グループパスワード(_G):"
+
+#: ../auth-dialog/main.c:488
+#, c-format
+msgid "You need to authenticate to access the Virtual Private Network “%s”."
+msgstr "仮想プライベートネットワーク“%s”にアクセスするには認証が必要です。"
+
+#: ../properties/nm-vpnc-editor-plugin.c:44
+msgid "Cisco Compatible VPN (vpnc)"
+msgstr "Cisco 互換 VPN (vpnc)"
+
+#: ../properties/nm-vpnc-editor-plugin.c:45
+msgid ""
+"Compatible with various Cisco, Juniper, Netscreen, and Sonicwall IPsec-based "
+"VPN gateways."
+msgstr ""
+"Cisco や Juniper、Netscreen、Sonicwall など様々な IPsec ベースの VPN ゲート"
+"ウェイとの互換性"
+
+#: ../properties/nm-vpnc-editor-plugin.c:508
+#, c-format
+msgid ""
+"The VPN settings file “%s” specifies that VPN traffic should be tunneled "
+"through TCP which is currently not supported in the vpnc software.\n"
+"\n"
+"The connection can still be created, with TCP tunneling disabled, however it "
+"may not work as expected."
+msgstr ""
+"VPN 設定ファイル“%s”は VPN 通信が TCP を介してトンネルされるように指定してい"
+"ますが、今のところ vpnc はこの機能をサポートしていません。\n"
+"\n"
+"TCP トンネリングを無効にした上で接続を作成することはできますが期待どおりに動"
+"作しないかもしれません。"
+
+#: ../properties/nm-vpnc-editor.c:374
+msgid "Secure (default)"
+msgstr "安全 (デフォルト)"
+
+#: ../properties/nm-vpnc-editor.c:377
+msgid "Weak (use with caution)"
+msgstr "弱い (注意して使用)"
+
+#: ../properties/nm-vpnc-editor.c:385
+msgid "None (completely insecure)"
+msgstr "なし (完全に無防備)"
+
+#: ../properties/nm-vpnc-editor.c:449
+msgid "Cisco (default)"
+msgstr "Cisco (デフォルト)"
+
+#: ../properties/nm-vpnc-editor.c:456
+msgid "Netscreen"
+msgstr "Netscreen"
+
+#: ../properties/nm-vpnc-editor.c:497
+msgid "NAT-T when available (default)"
+msgstr "NAT-T が使用可能な場合に使用 (デフォルト)"
+
+#: ../properties/nm-vpnc-editor.c:504
+msgid "NAT-T always"
+msgstr "NAT-T を常に使用"
+
+#: ../properties/nm-vpnc-editor.c:511
+msgid "Cisco UDP"
+msgstr "Cisco UDP"
+
+#: ../properties/nm-vpnc-editor.c:518
+msgid "Disabled"
+msgstr "無効"
+
+#: ../properties/nm-vpnc-editor.c:538 ../properties/nm-vpnc-editor.c:624
+msgid "DH Group 1"
+msgstr "DH グループ 1"
+
+#: ../properties/nm-vpnc-editor.c:545
+msgid "DH Group 2 (default)"
+msgstr "DH グループ 2 (デフォルト)"
+
+#: ../properties/nm-vpnc-editor.c:552 ../properties/nm-vpnc-editor.c:638
+msgid "DH Group 5"
+msgstr "DH グループ 5"
+
+#: ../properties/nm-vpnc-editor.c:610
+msgid "Server (default)"
+msgstr "サーバー (デフォルト)"
+
+#: ../properties/nm-vpnc-editor.c:617
+msgid "None"
+msgstr "なし"
+
+#: ../properties/nm-vpnc-editor.c:631
+msgid "DH Group 2"
+msgstr "DH グループ 2"
+
+#: ../properties/nm-vpnc-editor.c:678
+msgid "Choose a Certificate Authority (CA) certificate…"
+msgstr "認証局 (CA) の証明書を選択…"
+
+#: ../properties/nm-vpnc-editor.c:682
+msgid "PEM certificates (*.pem, *.crt, *.cer)"
+msgstr "PEM 証明書 (*.pem, *.crt, *.cer)"
+
+#: ../src/nm-vpnc-service.c:201
+#, c-format
+msgid "property “%s” invalid or not supported"
+msgstr "プロパティ“%s”は無効かサポートされていません"
+
+#: ../src/nm-vpnc-service.c:216
+#, c-format
+msgid "property “%s” contains a newline character"
+msgstr ""
+
+#: ../src/nm-vpnc-service.c:228
+#, c-format
+msgid "property “%s” file path “%s” is not absolute or does not exist"
+msgstr ""
+"プロパティ“%s”のファイルパス“%s”は絶対パスではないか、またはファイルが存"
+"在しません"
+
+#: ../src/nm-vpnc-service.c:241
+#, c-format
+msgid "invalid integer property “%s” or out of range [%d -> %d]"
+msgstr ""
+"数値型プロパティ“%s”が無効な数値か、または設定値が範囲外です [%d -> %d]"
+
+#: ../src/nm-vpnc-service.c:251
+#, c-format
+msgid "invalid boolean property “%s” (not yes or no)"
+msgstr ""
+"ブーリアン型プロパティ“%s”が無効な値です (yes、no ではありません)"
+
+#: ../src/nm-vpnc-service.c:258
+#, c-format
+msgid "unhandled property “%s” type %d"
+msgstr "プロパティ“%s”の型 (%d) を処理できません"
+
+#: ../src/nm-vpnc-service.c:275
+msgid "No VPN configuration options."
+msgstr "VPN 構成オプションがありません。"
+
+#: ../src/nm-vpnc-service.c:301
+msgid "No VPN secrets!"
+msgstr "VPN シークレットがありません!"
+
+#: ../src/nm-vpnc-service.c:646
+msgid "Could not find vpnc binary."
+msgstr "vpnc のバイナリが見つかりません。"
+
+#: ../src/nm-vpnc-service.c:764
+#, c-format
+msgid "Config option “%s” invalid or unknown."
+msgstr "設定オプションの“%s”が無効か、または不明なオプションです。"
+
+#: ../src/nm-vpnc-service.c:799
+#, c-format
+msgid "Config option “%s” not an integer."
+msgstr "設定オプションの“%s”は数値でありません。"
+
+#: ../src/nm-vpnc-service.c:987
+msgid "vpnc does not support interactive requests"
+msgstr ""
+
+#: ../src/nm-vpnc-service.c:1011
+msgid "Could not use new secrets as interactive mode is disabled."
+msgstr ""
+
+#: ../src/nm-vpnc-service.c:1020 ../src/nm-vpnc-service.c:1094
+msgid ""
+"Could not process the request because the VPN connection settings were "
+"invalid."
+msgstr "VPN 接続の設定が無効であるため、要求を処理できません。"
+
+#: ../src/nm-vpnc-service.c:1028
+msgid ""
+"Could not process the request because no pending authentication is required."
+msgstr ""
+
+#: ../src/nm-vpnc-service.c:1039
+#, c-format
+msgid ""
+"Could not process the request because the requested info “%s” was not "
+"provided."
+msgstr ""
+
+#: ../src/nm-vpnc-service.c:1237
+msgid "Don’t quit when VPN connection terminates"
+msgstr "VPN 接続が切断されても終了しない"
+
+#: ../src/nm-vpnc-service.c:1238
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr "詳細なデバッグ情報の保存を有効にする (パスワードも含まれます)"
+
+#: ../src/nm-vpnc-service.c:1239
+msgid "D-Bus name to use for this instance"
+msgstr "このインスタンスの D-Bus 名"
+
+#: ../src/nm-vpnc-service.c:1262
+msgid ""
+"nm-vpnc-service provides integrated Cisco Legacy IPsec VPN capability to "
+"NetworkManager."
+msgstr ""
+"nm-vpnc-service は NetworkManager に対して Cisco のレガシー実装の IPsec VPN "
+"との互換性を提供します。"
+
+#: ../shared/nm-utils/nm-shared-utils.c:264
+#, c-format
+msgid "object class '%s' has no property named '%s'"
+msgstr ""
+
+#: ../shared/nm-utils/nm-shared-utils.c:271
+#, c-format
+msgid "property '%s' of object class '%s' is not writable"
+msgstr ""
+
+#: ../shared/nm-utils/nm-shared-utils.c:278
+#, c-format
+msgid ""
+"construct property \"%s\" for object '%s' can't be set after construction"
+msgstr ""
+
+#: ../shared/nm-utils/nm-shared-utils.c:286
+#, c-format
+msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+msgstr ""
+
+#: ../shared/nm-utils/nm-shared-utils.c:295
+#, c-format
+msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+msgstr ""
+
+#: ../shared/nm-utils/nm-shared-utils.c:306
+#, c-format
+msgid ""
+"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+"type '%s'"
+msgstr ""
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:69
+#, c-format
+msgid "unable to get editor plugin name: %s"
+msgstr ""
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:103
+#, c-format
+msgid "missing plugin file \"%s\""
+msgstr ""
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:109
+#, c-format
+msgid "cannot load editor plugin: %s"
+msgstr ""
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:118
+#, c-format
+msgid "cannot load factory %s from plugin: %s"
+msgstr ""
+
+#: ../shared/nm-utils/nm-vpn-plugin-utils.c:144
+msgid "unknown error creating editor instance"
+msgstr ""
+
+#: ../properties/nm-vpnc-dialog.ui.h:1
+msgid "General"
+msgstr "全般"
+
+#: ../properties/nm-vpnc-dialog.ui.h:2
+msgid "Sho_w passwords"
+msgstr "パスワードを表示する(_W)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:3
+msgid ""
+"Group password\n"
+"config: IPSec secret <group_password>"
+msgstr ""
+"グループパスワード\n"
+"config: IPSec secret <group_password>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:5
+msgid "Gro_up password"
+msgstr "グループパスワード(_U)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:6
+msgid "_Gateway"
+msgstr "ゲートウェイ(_G)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:7
+msgid "G_roup name"
+msgstr "グループ名(_R)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:8
+msgid ""
+"IP/hostname of IPsec gateway\n"
+"config: IPSec gateway <gateway>"
+msgstr ""
+"IPsec ゲートウェイの IP/ホスト名\n"
+"config: IPSec gateway <gateway>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:10
+msgid ""
+"Group name\n"
+"config: IPSec ID <group_name>"
+msgstr ""
+"グループ名\n"
+"config: IPSec ID <group_name>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:12
+msgid "User _password"
+msgstr "ユーザーパスワード(_P)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:13
+msgid ""
+"User password for the connection\n"
+"config: Xauth password <password>"
+msgstr ""
+"接続のためのユーザーパスワード\n"
+"config: Xauth password <password>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:15
+msgid ""
+"User name for the connection\n"
+"config: Xauth username <user_name>"
+msgstr ""
+"接続のためのユーザー名\n"
+"config: Xauth username <user_name>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:17
+msgid "User na_me"
+msgstr "ユーザー名(_M)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:18
+msgid "Use _hybrid authentication"
+msgstr "ハイブリッド認証を利用する(_H)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:19
+msgid ""
+"Enable hybrid authentication, i.e. use certificate in addition to password.\n"
+"config: IKE Authmode hybrid"
+msgstr ""
+"ハイブリッド認証を有効化する。すなわちパスワードに加えて、証明書を利用す"
+"る。\n"
+"config: IKE Authmode hybrid"
+
+#: ../properties/nm-vpnc-dialog.ui.h:21
+msgid "CA _File"
+msgstr "CA ファイル(_F)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:22
+msgid ""
+"CA certificate in PEM format\n"
+"config: CA-File"
+msgstr ""
+"PEM 形式の CA 証明書\n"
+"config: CA-File"
+
+#: ../properties/nm-vpnc-dialog.ui.h:24
+msgid "Advance_d…"
+msgstr "高度な設定(_D)…"
+
+#: ../properties/nm-vpnc-dialog.ui.h:25
+msgid "Advanced Options"
+msgstr "高度なオプション"
+
+#: ../properties/nm-vpnc-dialog.ui.h:26
+msgid "Identification"
+msgstr "識別"
+
+#: ../properties/nm-vpnc-dialog.ui.h:27
+msgid "_Domain"
+msgstr "ドメイン名(_D)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:28
+msgid ""
+"(NT-)Domain name for authentication\n"
+"config: Domain <domain>"
+msgstr ""
+"(NT-)ドメイン認証\n"
+"config: Domain <domain>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:30
+msgid ""
+"Vendor of your IPsec gateway\n"
+"config: Vendor <cisco/netscreen>"
+msgstr ""
+"IPsec ゲートウェイのベンダー\n"
+"config: Vendor <cisco/netscreen>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:32
+msgid "_Vendor"
+msgstr "ベンダー(_V)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:33
+msgid "Ve_rsion"
+msgstr "バージョン(_R)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:34
+msgid ""
+"Application version to report. \n"
+"config: Application version <ASCII string>"
+msgstr ""
+"報告するアプリケーションバージョン\n"
+"config: Application version <ASCII string>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:36
+msgid "Transport and Security"
+msgstr "転送方式とセキュリティ"
+
+#: ../properties/nm-vpnc-dialog.ui.h:37
+msgid "Disable Dead _Peer Detection"
+msgstr "デッドピア検知を無効にする(_P)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:38
+msgid ""
+"Disable sending DPD packets (sets timeout to 0)\n"
+"config: DPD idle timeout (our side) 0"
+msgstr ""
+"DPD パケットの送信を無効化 (0 にタイムアウトを設定)\n"
+"config: DPD idle timeout (our side) 0"
+
+#: ../properties/nm-vpnc-dialog.ui.h:40
+msgid "_Local port"
+msgstr "ローカルポート(_L)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:41
+msgid "Perfect _Forward Secrecy"
+msgstr "Perfect Forward Secrecy(_F)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:42
+msgid "_IKE DH Group"
+msgstr "IKE DH グループ(_I)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:43
+msgid "_NAT traversal"
+msgstr "NAT traversal(_N)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:44
+msgid ""
+"Local ISAKMP port to use (0 means random port; 500 is vpnc’s default)\n"
+"config: Local Port <0-65535>"
+msgstr ""
+"利用するローカル ISAKMP のポート (0 はランダムポート、500 は vpnc のデフォル"
+"ト)\n"
+"config: Local Port <0-65535>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:46
+msgid "0"
+msgstr "0"
+
+#: ../properties/nm-vpnc-dialog.ui.h:47
+msgid ""
+"Diffie-Hellman group to use for PFS\n"
+"config: Perfect Forward Secrecy <nopfs/dh1/dh2/dh5/server>"
+msgstr ""
+"PFS に Diffie-Hellman グループを使用する\n"
+"config: Perfect Forward Secrecy <nopfs/dh1/dh2/dh5/server>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:49
+msgid ""
+"Name of the IKE DH group\n"
+"config: IKE DH Group <dh1/dh2/dh5>"
+msgstr ""
+"IKE DH グループ名\n"
+"config: IKE DH Group <dh1/dh2/dh5>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:51
+msgid ""
+"NAT traversal method to use\n"
+"config: NAT Traversal Mode <natt/none/force-natt/cisco-udp>"
+msgstr ""
+"利用する NAT トラバーサルの方式\n"
+"config: NAT Traversal Mode <natt/none/force-natt/cisco-udp>"
+
+#: ../properties/nm-vpnc-dialog.ui.h:53
+msgid ""
+"Encryption method\n"
+"config: nothing for Secure, “Enable Single DES” for Weak, “Enable no "
+"encryption” for None"
+msgstr ""
+"暗号化の方式\n"
+"config: nothing は安全です。“Enable Single DES”は弱いです。“Enable no "
+"encryption”は暗号なしです。"
+
+#: ../properties/nm-vpnc-dialog.ui.h:55
+msgid ""
+"Tunnel interface name to use\n"
+"config: Interface name <name>"
+msgstr ""
+
+#: ../properties/nm-vpnc-dialog.ui.h:57
+msgid "_Encryption method"
+msgstr "暗号化方式(_E)"
+
+#: ../properties/nm-vpnc-dialog.ui.h:58
+msgid "Tunnel _interface name"
+msgstr "トンネルインターフェース名(_I)"
+
+#~ msgid "VPN Connection Manager (vpnc)"
+#~ msgstr "VPN 接続マネージャー (vpnc)"
+
+#~ msgid "Add, Remove, and Edit VPN Connections"
+#~ msgstr "VPN 接続を追加、削除または編集"
+
+#~ msgid "Saved"
+#~ msgstr "保存する"
+
+#~ msgid "Always Ask"
+#~ msgstr "常に確認する"
+
+#~ msgid "Not Required"
+#~ msgstr "不要"
+
+#~ msgid "TCP tunneling not supported"
+#~ msgstr "TCP トンネリングはサポートされていません"
+
+#~ msgid "_Secondary Password"
+#~ msgstr "第二パスワード(_S)"
+
+#~ msgid "Sh_ow passwords"
+#~ msgstr "パスワードを表示する(_O)"
+
+#~ msgid "_Remember passwords for this session"
+#~ msgstr "このセッションのパスワードを記憶する(_R)"
+
+#~ msgid "_Save passwords in keyring"
+#~ msgstr "パスワードをキーリングに保存する(_S)"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "<b>Optional</b>"
+#~ msgstr "<b>オプション</b>"
+
+#~ msgid "Connect _anonymously"
+#~ msgstr "匿名で接続(_A)"
+
+#~ msgid "Connect as _user"
+#~ msgstr "ユーザで接続(_U)"
+
+#~ msgid "The following vpnc VPN connection will be created"
+#~ msgstr "次の vpnc VPN 接続を作成します"
+
+#~ msgid "Name:  %s"
+#~ msgstr "名前:  %s"
+
+#~ msgid "Gateway:  %s"
+#~ msgstr "ゲートウェイ:  %s"
+
+#~ msgid "Group Name:  %s"
+#~ msgstr "グループ名:  %s"
+
+#~ msgid "Username:  %s"
+#~ msgstr "ユーザ名:  %s"
+
+#~ msgid "Domain:  %s"
+#~ msgstr "ドメイン:  %s"
+
+#~ msgid "Routes:  %s"
+#~ msgstr "ルート:  %s"
+
+#~ msgid "NAT-Keepalive packet interval:  %s"
+#~ msgstr "NAT-Keepalive パケット間隔:  %s"
+
+#~ msgid "Enable Single DES"
+#~ msgstr "シングル DES を有効にする"
+
+#~ msgid "Disable NAT Traversal"
+#~ msgstr "NAT Traversal を無効にする"
+
+#~ msgid "The connection details can be changed using the \"Edit\" button."
+#~ msgstr "接続の詳細は\"編集\"ボタンで変更できます。"
+
+#~ msgid "Cannot import settings"
+#~ msgstr "設定をインポートできません"
+
+#~ msgid "The VPN settings file '%s' does not contain valid data."
+#~ msgstr "VPN 設定ファイル '%s' には適切なデータが含まれていません。"
+
+#~ msgid "Select file to import"
+#~ msgstr "インポートするファイルを選択"
+
+#~ msgid "Save as..."
+#~ msgstr "別名で保存..."
+
+#~ msgid "A file named \"%s\" already exists."
+#~ msgstr "ファイル \"%s\" はすでに存在します。"
+
+#~ msgid "Do you want to replace it with the one you are saving?"
+#~ msgstr "保存しようとしているファイルで上書きしますか?"
+
+#~ msgid "Failed to export configuration"
+#~ msgstr "設定のエクスポートに失敗"
+
+#~ msgid "Failed to save file %s"
+#~ msgstr "ファイル %s の保存に失敗"
+
+#~ msgid "<i>example: 172.16.0.0/16 10.11.12.0/24</i>"
+#~ msgstr "<i>例: 172.16.0.0/16 10.11.12.0/24</i>"
+
+#~ msgid "Connection na_me"
+#~ msgstr "接続名(_M)"
+
+#~ msgid "Enable _weak single DES encryption"
+#~ msgstr "弱いシングル DES 暗号を有効にする(_W)"
+
+#~ msgid "Import _Saved Configuration..."
+#~ msgstr "保存設定をインポート(_S)..."
+
+#~ msgid "Interval"
+#~ msgstr "間隔"
+
+#~ msgid ""
+#~ "Name used to identify the connection to the private network, e.g. "
+#~ "\"Campus VPN\" or \"Corporate Network\""
+#~ msgstr ""
+#~ "例えば \"キャンパス VPN\" や \"社内ネットワーク\" などといったプライベート"
+#~ "ネットワークの接続を識別するための名前です。"
+
+#~ msgid "Override _user name"
+#~ msgstr "ユーザ名を上書き指定(_U)"
+
+#~ msgid ""
+#~ "Please enter the information provided by your system administrator below. "
+#~ "Do not enter your password here as you will be prompted when connecting."
+#~ msgstr ""
+#~ "システム管理者が提供した情報を下に入力してください。接続時にきかれるまでは"
+#~ "パスワードは入力しないでください。"
+
+#~ msgid ""
+#~ "Please note that the file you import is not a Cisco VPN or VPNC "
+#~ "configuration file. Ask your adminstrator for the file."
+#~ msgstr ""
+#~ "インポートしたファイルは Cisco VPN と VPNC の設定ファイルのいずれでもあり"
+#~ "ません。管理者に尋ねてみてください。"
+
+#~ msgid "Use NAT _keepalive packets"
+#~ msgstr "NAT Keepalive パケットを使用(_K)"
+
+#~ msgid "_Only use VPN connection for these addresses"
+#~ msgstr "これらのアドレスについてのみ VPN 接続を利用(_O)"
+
+#~ msgid "The VPN login failed because the VPN program could not be started."
+#~ msgstr "VPN ログインに失敗。VPN プログラムを起動できませんでした。"
+
+#~ msgid "<b>Required Information</b>"
+#~ msgstr "<b>必須情報</b>"
+
+#~ msgid "O_ptional Information"
+#~ msgstr "オプション情報(_P)"

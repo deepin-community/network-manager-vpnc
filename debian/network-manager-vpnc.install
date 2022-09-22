@@ -1,0 +1,6 @@
+usr/lib/NetworkManager/VPN/nm-vpnc-service.name
+usr/lib/NetworkManager/nm-vpnc-service
+usr/lib/NetworkManager/nm-vpnc-service-vpnc-helper
+usr/lib/*/NetworkManager/libnm-vpn-plugin-vpnc.so
+usr/share/dbus-1/
+usr/share/locale/

@@ -1,0 +1,573 @@
+network-manager-vpnc (1.2.8.1-4) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>  Mon, 25 Jul 2022 01:40:21 -0400
+
+network-manager-vpnc (1.2.8.1-4) unstable; urgency=medium
+
+  [ donghualin ]
+  * UNRELEASED
+
+ -- caixiangrong <caixiangrong@uniontech.com>  Mon, 25 Jul 2022 13:36:41 +0800
+
+network-manager-vpnc (1.2.8.1-3) unstable; urgency=medium
+
+  * Enable GTK 4 support
+
+ -- donghualin <donghualin@uniontech.com>  Wed, 22 Jun 2022 14:45:18 +0200
+
+network-manager-vpnc (1.2.8-3) unstable; urgency=medium
+
+  * Enable GTK 4 support
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 30 Mar 2022 12:32:18 +0200
+
+network-manager-vpnc (1.2.8-2) unstable; urgency=medium
+
+  * Drop unnecessary version contraint
+  * Drop override for dh_auto_test
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 12 Mar 2022 21:07:01 +0100
+
+network-manager-vpnc (1.2.8-1) unstable; urgency=medium
+
+  * New upstream version 1.2.8
+  * Drop patches, all merged upstream
+  * Bump libglib2.0-dev Build-Depends to (>= 2.34)
+  * Stop installing the nm-vpnc-dialog.ui file
+  * Enable all hardening build flags
+  * Update debian/watch to version 4
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 12 Mar 2022 19:17:08 +0100
+
+network-manager-vpnc (1.2.6-4) unstable; urgency=medium
+
+  * Remove obsolete debian/network-manager-vpnc.maintscript
+  * Set upstream metadata fields: Bug-Submit, Bug-Database, Repository,
+    Repository-Browse
+  * Bump Standards-Version to 4.6.0
+  * Bump debhelper-compat to 13
+  * Drop override for dh_missing.
+    No longer needed with debhelper-compat 13.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 25 Aug 2021 11:51:02 +0200
+
+network-manager-vpnc (1.2.6-3) unstable; urgency=medium
+
+  * Update debian/copyright
+  * Remove --as-needed from linker flags and dh_autoreconf
+  * Remove unused dh_makeshlibs override
+  * Bump Standards-Version to 4.5.0
+  * Use debhelper-compat (= 12) Build-Depends and drop debian/compat
+  * Use /usr/share/metainfo for AppData files
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 05 May 2020 14:23:18 +0200
+
+network-manager-vpnc (1.2.6-2) unstable; urgency=medium
+
+  * Move D-Bus policy file to /usr/share/dbus-1/system.d/
+  * Remove obsolete conffile /etc/dbus-1/system.d/nm-vpnc-service.conf on
+    upgrades
+  * Bump Standards-Version to 4.2.1
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 27 Nov 2018 14:59:41 +0100
+
+network-manager-vpnc (1.2.6-1) unstable; urgency=medium
+
+  * New upstream version 1.2.6
+    - service: disallow newlines in configuration values (CVE-2018-10900)
+      (Closes: #904255)
+  * Bump Standards-Version to 4.1.5
+  * Drop no-longer needed Breaks/Replaces
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 24 Jul 2018 18:54:43 +0200
+
+network-manager-vpnc (1.2.4-7) unstable; urgency=medium
+
+  * Set Rules-Requires-Root to no
+  * Update Vcs-* to point to https://salsa.debian.org
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 08 Apr 2018 16:51:44 +0200
+
+network-manager-vpnc (1.2.4-6) unstable; urgency=medium
+
+  * Upload to unstable
+  * Switch to dh_missing and abort on uninstalled files
+  * Bump debhelper compat level to 11
+  * Bump Standards-Version to 4.1.3
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 21 Jan 2018 22:02:56 +0100
+
+network-manager-vpnc (1.2.4-5) experimental; urgency=medium
+
+  * Switch URLs to https
+  * Drop obsolete Build-Depends on libdbus-glib-1-dev.
+    It is no longer required after the port to GDBus.
+  * Stop building with libnm-glib compat support
+  * Remove obsolete nm-vpnc-service.name conffile on upgrades
+  * Use architecture.mk provided by dpkg-dev to retrieve DEB_HOST_MULTIARCH
+  * Use --as-needed to avoid unnecessary shlibs dependencies
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 12 May 2017 23:37:30 +0200
+
+network-manager-vpnc (1.2.4-4) unstable; urgency=medium
+
+  * Update Vcs-* according to the latest recommendation
+  * Install AppData file
+  * Move libnm-vpn-plugin-vpnc.so and translations into main package.
+    This plugin is used by nmcli and doesn't have any GTK dependencies.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 25 Jan 2017 20:21:36 +0100
+
+network-manager-vpnc (1.2.4-3) unstable; urgency=medium
+
+  * Brown paper bag release: Actually run tests with --no-parallel.
+    (Closes: #839849)
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 05 Oct 2016 22:04:46 +0200
+
+network-manager-vpnc (1.2.4-2) unstable; urgency=medium
+
+  * Don't run the tests in parallel for now until bgo#772471 is fixed.
+    (Closes: #839849)
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 05 Oct 2016 21:39:31 +0200
+
+network-manager-vpnc (1.2.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump debhelper compat level to 10.
+  * Bump Build-Depends on libsecret-dev to (>= 0.18) as per configure.ac.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 04 Oct 2016 19:59:14 +0200
+
+network-manager-vpnc (1.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump network-manager related build dependencies to >= 1.2.0.
+  * Add Depends on network-manager (>= 1.2.0) to network-manager-vpnc. This
+    ensures we have a version that can handle plugin paths which are not
+    absolute. (Closes: #824051)
+  * Bump Standards-Version to 3.9.8.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 11 May 2016 19:32:57 +0200
+
+network-manager-vpnc (1.2.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 23 Apr 2016 00:47:33 +0200
+
+network-manager-vpnc (1.1.93-1) unstable; urgency=medium
+
+  * New upstream release (1.2 rc1).
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 06 Apr 2016 01:32:45 +0200
+
+network-manager-vpnc (1.1.92-1) unstable; urgency=medium
+
+  * New upstream release (1.2 beta3).
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 31 Mar 2016 15:37:18 +0200
+
+network-manager-vpnc (1.1.91-1) unstable; urgency=medium
+
+  * New upstream release (1.2 beta2).
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 02 Mar 2016 03:15:53 +0100
+
+network-manager-vpnc (1.1.90-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Bump Standards-Version to 3.9.7
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 04 Feb 2016 06:28:46 +0100
+
+network-manager-vpnc (1.1.90-1) experimental; urgency=medium
+
+  * New upstream release (1.2 beta1).
+  * Update Build-Depends
+    - Bump network-manager-dev, libnm-util-dev, libnm-glib-dev,
+      libnm-glib-vpn-dev and libnm-gtk-dev to (>= 1.1.0).
+    - Add libnm-dev (>= 1.1.0) and libnma-dev (>= 1.1.0).
+  * Install nm-vpnc-service.name for the new, libnm based plugin.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 22 Jan 2016 01:07:38 +0100
+
+network-manager-vpnc (1.0.8-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 20 Nov 2015 19:03:46 +0100
+
+network-manager-vpnc (1.0.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Build-Depends on libnm-gtk-dev to (>= 1.0.5) as per configure.ac.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 28 Aug 2015 17:50:05 +0200
+
+network-manager-vpnc (1.0.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 05 May 2015 22:39:45 +0200
+
+network-manager-vpnc (1.0.0-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Fix typo in package description. (Closes: #756113)
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 27 Apr 2015 17:58:56 +0200
+
+network-manager-vpnc (1.0.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.6. No further changes.
+  * Update Vcs-Git and Vcs-Browser to use the canonical Alioth URLs.
+  * Update Vcs-Browser URL to use cgit and https.
+  * Update Homepage URL to use https.
+  * Disable -Werror for now as it triggers -Werror=unused-result.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 28 Jan 2015 16:57:25 +0100
+
+network-manager-vpnc (0.9.10.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Build-Depends as per configure.ac.
+  * Drop obsolete --with-gtkver configure switch.
+  * Exclude libtool .la files from list-missing.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 10 Jul 2014 07:51:29 +0200
+
+network-manager-vpnc (0.9.8.6-2) unstable; urgency=medium
+
+  * Bump Standards-Version to 3.9.5.
+  * Bump debhelper compatibility level to 9.
+  * Fix install paths to be multi-arch aware.
+  * Drop dbus reload from postinst. The dbus package uses a file trigger
+    nowadays to automatically reload its configuration.
+  * Rely on dh v9 to call dpkg-buildflags.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 03 Apr 2014 23:38:20 +0200
+
+network-manager-vpnc (0.9.8.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove 01-fix-path-to-connection-editor-plugin-in-service-file.patch,
+    merged upstream.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 13 Sep 2013 20:03:27 +0200
+
+network-manager-vpnc (0.9.8.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump network-manager Build-Depends to (>= 0.9.8).
+  * Fix path to connection-editor plugin in service file. Patch cherry-picked
+    from upstream Git.
+  * Use dh-autoreconf to update the build system.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 11 Jun 2013 00:36:36 +0200
+
+network-manager-vpnc (0.9.8.0-2) unstable; urgency=low
+
+  * Mark binary packages as linux-any.
+  * Upload to unstable.
+  * Bump Standards-Version to 3.9.4. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 06 May 2013 18:19:09 +0200
+
+network-manager-vpnc (0.9.8.0-1) experimental; urgency=low
+
+  * New upstream release.
+    - Provides configuration option and UI for local port. (Closes: #658269)
+  * Drop obsolete Breaks/Replaces.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 21 Feb 2013 15:18:40 +0100
+
+network-manager-vpnc (0.9.6.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump Build-Depends on libnm-*-dev and network-manager-dev to (>= 0.9.6).
+  * Use --list-missing to show uninstalled files.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 27 Oct 2012 00:20:41 +0200
+
+network-manager-vpnc (0.9.4.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix versioned Build-Depends on dpkg-dev.
+    The buildflags.mk snippet was added in version 1.16.1, not 1.6.1.
+  * Bump Build-Depends on libnm-*-dev and network-manager-dev to (>= 0.9.4).
+  * Drop Build-Depends on libgconf2-dev.
+  * Update debian/copyright using the machine-readable copyright format 1.0.
+  * Bump Standards-Version to 3.9.3.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 24 Mar 2012 23:58:01 +0100
+
+network-manager-vpnc (0.9.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - Bump Build-Depends on libnm-*-dev and network-manager-dev to (>= 0.9.2).
+  * Enable default hardening options from dpkg-buildflags.
+    - Use buildflags.mk snippet in debian/rules.
+    - Add Build-Depends on dpkg-dev (>= 1.6.1).
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 12 Nov 2011 06:27:15 +0100
+
+network-manager-vpnc (0.9.0-3) unstable; urgency=low
+
+  * debian/watch: Track .xz tarballs.
+  * Build against GTK 3.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 16 Oct 2011 09:23:13 +0200
+
+network-manager-vpnc (0.9.0-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 16 Sep 2011 21:46:40 +0200
+
+network-manager-vpnc (0.9.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - Bump Build-Depends on libnm-*-dev and network-manager-dev to (>= 0.9).
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 24 Aug 2011 15:38:24 +0200
+
+network-manager-vpnc (0.8.999-1) experimental; urgency=low
+
+  * New upstream release (0.9 rc2).
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 04 May 2011 23:59:26 +0200
+
+network-manager-vpnc (0.8.998-1) experimental; urgency=low
+
+  * New upstream release (0.9 rc1).
+  * debian/control
+    - Bump Build-Depends on libnm-*-dev and network-manager-dev to
+      (>= 0.8.998).
+    - Bump Build-Depends on libgtk2.0-dev to (>= 2.20).
+  * debian/rules
+    - Build against GTK+ version 2.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 03 May 2011 01:42:30 +0200
+
+network-manager-vpnc (0.8.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - Bump Build-Depends on libnm-*-dev and network-manager-dev to (>= 0.8.4).
+    - Update package descriptions.
+    - Bump Standards-Version to 3.9.2. No further changes.
+  * debian/watch
+    - Switch to bzip2.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 21 Apr 2011 17:31:16 +0200
+
+network-manager-vpnc (0.8.3.995-1) unstable; urgency=low
+
+  * New upstream release (0.8.4 beta1).
+  * Bump debhelper compatibility level to 8.
+  * debian/control
+    - Drop Build-Depends on libglade2-dev, converted to GtkBuilder.
+    - Bump Build-Depends on libnm-*-dev and network-manager-dev to
+      (>= 0.8.3.995).
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 19 Mar 2011 11:02:34 +0100
+
+network-manager-vpnc (0.8.2-3) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 07 Feb 2011 01:38:28 +0100
+
+network-manager-vpnc (0.8.2-2) experimental; urgency=low
+
+  * Switch from cdbs to dh
+    - Drop Build-Depends on cdbs.
+    - Bump Build-Depends on debhelper to (>= 7.0.50~) for override targets.
+    - Convert debian/rules to use dh.
+    - Rename debian/docs to debian/network-manager-vpnc.docs so it is
+      correctly picked up by dh_installdocs.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 22 Dec 2010 04:51:30 +0100
+
+network-manager-vpnc (0.8.2-1) experimental; urgency=low
+
+  * New upstream release.
+  * Update Vcs-* fields: Move packaging from svn to git.
+  * debian/control
+    - Bump Build-Depends on libnm-* packages to (>= 0.8.2).
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 18 Dec 2010 12:18:29 +0100
+
+network-manager-vpnc (0.8.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Switch to source format 3.0 (quilt).
+    - Add debian/source/format.
+    - Drop Build-Depends on quilt.
+    - Remove /usr/share/cdbs/1/rules/patchsys-quilt.mk from debian/rules.
+    - Remove debian/README.source.
+  * debian/control
+    - Bump Build-Depends on libnm-* packages to (>= 0.8.1).
+    - Bump Standards-Version to 3.9.1. Use Breaks instead of Conflicts as
+      recommended by the new policy.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 27 Jul 2010 15:13:25 +0200
+
+network-manager-vpnc (0.8-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - Bump Build-Depends on libnm-* packages to (>= 0.8).
+    - Bump Standards-Version to 3.8.4. No further changes.
+  * debian/network-manager-vpnc-gnome.install
+    - Remove .desktop file and icons, no longer installed or used upstream.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 22 Feb 2010 19:27:57 +0100
+
+network-manager-vpnc (0.7.999-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 27 Jan 2010 01:08:39 +0100
+
+network-manager-vpnc (0.7.999-1) experimental; urgency=low
+
+  * New upstream release (0.8 RC3).
+    - Fixes misleading error message when sending the IPv4 configuration
+      fails. (Closes: #529747)
+  * debian/control
+    - Bump Build-Depends on libnm-* packages to (>= 0.7.999).
+    - Bump Build-Depends on libdbus-glib-1-dev to (>= 0.74).
+  * debian/patches/02_add_disable_natt_and_1des.diff
+    - Drop, patch has been disabled for quite a while and equivalent
+      functionality has been added upstream.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 23 Jan 2010 01:29:48 +0100
+
+network-manager-vpnc (0.7.2-1) unstable; urgency=low
+
+  [ Soren Hansen ]
+  * Remove myself from Uploaders.
+
+  [ Michael Biebl ]
+  * New upstream release.
+  * debian/control
+    - Bump build dependencies on nm packages to (>= 0.7.2).
+    - Bump Standards-Version to 3.8.3. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 27 Nov 2009 10:51:59 +0100
+
+network-manager-vpnc (0.7.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards-Version to 3.8.1. No further changes.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 16 Apr 2009 17:47:47 +0200
+
+network-manager-vpnc (0.7.0.99-1) unstable; urgency=low
+
+  * New upstream release (0.7.1 rc3).
+  * debian/patches/10-tests-static-build-fix.patch
+    - Removed, merged upstream.
+
+ -- Michael Biebl <biebl@debian.org>  Thu, 05 Mar 2009 13:48:39 +0100
+
+network-manager-vpnc (0.7.0.97-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/patches/01-dbus_policy.patch
+    - Removed, merged upstream.
+  * debian/patches/10-tests-static-build-fix.patch
+    - Fix build failure with "--disable-static".
+  * debian/control
+    - Bump Build-Depends on libnm-util-dev to (>= 0.7.0.97).
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 25 Feb 2009 10:53:30 +0100
+
+network-manager-vpnc (0.7.0-2) experimental; urgency=low
+
+  * debian/control
+    - Set priority to optional.
+    - Drop libgnomeui-dev from Build-Depends, no longer required.
+    - Wrap build dependencies.
+    - Bump build dependency on debhelper to (>= 7).
+  * debian/compat
+    - Bump to debhelper v7 compat mode.
+  * debian/patches/01-dbus_policy.patch
+    - Remove bare send_interface policy rules. (Closes: #510735)
+  * debian/rules
+    - Include gnome.mk cdbs class instead of autotools.mk.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 14 Feb 2009 15:36:28 +0100
+
+network-manager-vpnc (0.7.0-1) experimental; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - Add Vcs-* fields pointing to the Subversion repository of the package.
+    - Bump Standards-Version to 3.8.0. Add README.source as recommended by the
+      new policy.
+    - Fix GNOME spelling error in the package description.
+    - Set Utopia Maintenance Team as Maintainer, add myself and Soren to
+      Uploaders.
+    - Add Homepage: field. (Closes: #482549)
+    - Update build dependencies.
+  * debian/rules
+    - Do not run autogen.sh, the upstream tarball contains a proper build
+      system now.
+    - Install plugins into /usr/lib/NetworkManager, so NetworkManager can find
+      them.
+  * debian/*.install
+    - Update accordingly.
+  * Switch patch management system to quilt.
+  * Drop obsolete patches
+    - debian/patches/01_fix_dbus_signal_name.diff
+    - debian/patches/04_nm-vpnc-server-name.diff
+    - debian/patches/03_disable_vi_gmo.diff
+  * Disable patches which do not apply cleanly anymore
+    - debian/patches/02_add_disable_natt_and_1des.diff
+  * debian/debian/network-manager-vpnc.postinst
+    - Do no longer restart NetworkManager, only tell dbus to reload the config
+      files.
+  * debian/watch
+    - Add watch file which allows to track new upstream releases.
+  * debian/copyright
+    - Revised and updated.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 15 Dec 2008 21:17:03 +0100
+
+network-manager-vpnc (0.6.4svn2806-1) unstable; urgency=low
+
+  * New SVN checkout.
+  * Updated maintainer.
+  * Split package into n-m-v and n-m-v-gnome (added Replaces and
+    Conflicts accordingly).
+  * Added lib-nm-util to Build-Depends.
+  * Don't try to generate vietnamese translations. They don't exist.
+  * Fix library references in nm-vpnc-service.name.in.
+  * Use /etc/init.d/network-manager instead of
+    /etc/dbus/event.d/25NetworkManager.
+
+ -- Soren Hansen <soren@ubuntu.com>  Tue, 02 Oct 2007 19:42:57 +0200
+
+network-manager-vpnc (0.6.4svn2569-1) UNRELEASED; urgency=low
+
+  * New SVN checkout
+  * patches/02_add_disable_natt_and_1des.diff:
+    + Add "Single DES encryption" and "Disable Nat Traversal" options,
+      thanks to Stéphane Graber
+
+ -- Soren Hansen <sh@linux2go.dk>  Thu, 10 May 2007 14:36:20 +0200
+
+network-manager-vpnc (0.6.4svn2422-1) unstable; urgency=low
+
+  * Initial upload to Debian (Closes: #362005)
+
+ -- Soren Hansen <sh@linux2go.dk>  Wed, 7 Mar 2007 22:45:43 +0100
