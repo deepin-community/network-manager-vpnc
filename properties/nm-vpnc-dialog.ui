@@ -501,7 +501,7 @@ config: Domain &lt;domain&gt;</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Vendor of your IPsec gateway
-config: Vendor &lt;cisco/netscreen&gt;</property>
+config: Vendor &lt;cisco/netscreen/fortigate&gt;</property>
                 <property name="model">model6</property>
                 <child>
                   <object class="GtkCellRendererText" id="renderer6"/>
@@ -582,6 +582,30 @@ config: Interface name &lt;name&gt;</property>
               <packing>
                 <property name="left_attach">1</property>
                 <property name="top_attach">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label32">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="xalign">1</property>
+                <property name="label" translatable="yes">Interface MTU</property>
+                <property name="use_underline">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">11</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="interface_mtu_entry">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="tooltip_text" translatable="yes">Interface MTU</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">11</property>
               </packing>
             </child>
             <child>
@@ -666,7 +690,7 @@ config: NAT Traversal Mode &lt;natt/none/force-natt/cisco-udp&gt;</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Name of the IKE DH group
-config: IKE DH Group &lt;dh1/dh2/dh5&gt;</property>
+config: IKE DH Group &lt;dh1/dh2/dh5/dh14/dh15/dh16/dh17/dh18&gt;</property>
                 <property name="model">model5</property>
                 <child>
                   <object class="GtkCellRendererText" id="renderer5"/>
@@ -699,7 +723,7 @@ config: IKE DH Group &lt;dh1/dh2/dh5&gt;</property>
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Diffie-Hellman group to use for PFS
-config: Perfect Forward Secrecy &lt;nopfs/dh1/dh2/dh5/server&gt;</property>
+config: Perfect Forward Secrecy &lt;nopfs/dh1/dh2/dh5/dh14/dh15/dh16/dh17/dh18/server&gt;</property>
                 <property name="model">model7</property>
                 <child>
                   <object class="GtkCellRendererText" id="renderer7"/>
@@ -743,6 +767,7 @@ config: Local Port &lt;0-65535&gt;</property>
                 <property name="top_attach">10</property>
               </packing>
             </child>
+
             <child>
               <object class="GtkCheckButton" id="disable_dpd_checkbutton">
                 <property name="label" translatable="yes">Disable Dead _Peer Detection</property>
@@ -756,9 +781,43 @@ config: DPD idle timeout (our side) 0</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
-                <property name="top_attach">11</property>
+                <property name="top_attach">12</property>
               </packing>
             </child>
+
+            <child>
+              <object class="GtkCheckButton" id="weak_authentication_checkbutton">
+                <property name="label" translatable="yes">Enable weak (insecure) authentication</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="tooltip_text" translatable="yes">Enable use of known insecure algorithms (such as MD5) for password hashing</property>
+                <property name="use_underline">True</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">13</property>
+              </packing>
+            </child>
+
+            <child>
+              <object class="GtkCheckButton" id="weak_encryption_checkbutton">
+                <property name="label" translatable="yes">Enable weak (insecure) encryption</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="tooltip_text" translatable="yes">Enable use of known insecure algorithms (such as DES and 3DES) for encryption</property>
+                <property name="use_underline">True</property>
+                <property name="draw_indicator">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">14</property>
+              </packing>
+            </child>
+
+
           </object>
         </child>
       </object>

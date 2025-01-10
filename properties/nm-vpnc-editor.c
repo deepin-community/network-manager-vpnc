@@ -27,6 +27,7 @@
 #include "nm-default.h"
 
 #include "nm-vpnc-editor.h"
+#include "nm-vpnc-editor-plugin.h"
 
 #include <nma-cert-chooser.h>
 #include <netinet/in.h>
@@ -273,6 +274,10 @@ populate_adv_dialog (VpncEditor *self)
 		if (!strcmp (value, NM_VPNC_VENDOR_NETSCREEN))
 			active = 1;
 	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_VENDOR_FORTIGATE))
+			active = 2;
+	}
 	gtk_combo_box_set_active (GTK_COMBO_BOX (widget), active == -1 ? 0 : active);
 
 	/* Application version */
@@ -288,8 +293,6 @@ populate_adv_dialog (VpncEditor *self)
 	g_return_if_fail (widget != NULL);
 	if (priv->interface_name)
 		gtk_editable_set_text (GTK_EDITABLE (widget), priv->interface_name);
-	else
-		gtk_editable_set_text (GTK_EDITABLE (widget), "");
 
 	/* Encryption combo */
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "encryption_combo"));
@@ -347,6 +350,26 @@ populate_adv_dialog (VpncEditor *self)
 		if (!strcmp (value, NM_VPNC_DHGROUP_DH5))
 			active = 2;
 	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_DHGROUP_DH14))
+			active = 3;
+	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_DHGROUP_DH15))
+			active = 4;
+	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_DHGROUP_DH16))
+			active = 5;
+	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_DHGROUP_DH17))
+			active = 6;
+	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_DHGROUP_DH18))
+			active = 7;
+	}
 	gtk_combo_box_set_active (GTK_COMBO_BOX (widget), active == -1 ? 1 : active);
 
 	/* Perfect Forward Secrecy combo */
@@ -374,6 +397,26 @@ populate_adv_dialog (VpncEditor *self)
 		if (!strcmp (value, NM_VPNC_PFS_DH5))
 			active = 4;
 	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_PFS_DH14))
+			active = 5;
+	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_PFS_DH15))
+			active = 6;
+	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_PFS_DH16))
+			active = 7;
+	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_PFS_DH17))
+			active = 8;
+	}
+	if ((active == -1) && value) {
+		if (!strcmp (value, NM_VPNC_PFS_DH18))
+			active = 9;
+	}
 	gtk_combo_box_set_active (GTK_COMBO_BOX (widget), active == -1 ? 0 : active);
 
 	/* Local Port */
@@ -398,6 +441,27 @@ populate_adv_dialog (VpncEditor *self)
 	g_return_if_fail (widget != NULL);
 	value = nm_setting_vpn_get_data_item (priv->s_vpn, NM_VPNC_KEY_DPD_IDLE_TIMEOUT);
 	if (value && priv->orig_dpd_timeout == 0)
+		gtk_check_button_set_active (GTK_CHECK_BUTTON (widget), TRUE);
+
+	/* Interface MTU */
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "interface_mtu_entry"));
+	g_return_if_fail (widget != NULL);
+	value = nm_setting_vpn_get_data_item (priv->s_vpn, NM_VPNC_KEY_MTU);
+	if (value)
+		gtk_editable_set_text (GTK_EDITABLE (widget), value);
+
+	/* Weak Authentication */
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "weak_authentication_checkbutton"));
+	g_return_if_fail (widget != NULL);
+	value = nm_setting_vpn_get_data_item (priv->s_vpn, NM_VPNC_KEY_WEAK_AUTH);
+	if (value && !strcmp(value, "yes"))
+		gtk_check_button_set_active (GTK_CHECK_BUTTON (widget), TRUE);
+
+	/* Weak Encryption */
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "weak_encryption_checkbutton"));
+	g_return_if_fail (widget != NULL);
+	value = nm_setting_vpn_get_data_item (priv->s_vpn, NM_VPNC_KEY_WEAK_ENCRYPT);
+	if (value && !strcmp(value, "yes"))
 		gtk_check_button_set_active (GTK_CHECK_BUTTON (widget), TRUE);
 }
 
@@ -517,6 +581,24 @@ update_adv_settings (VpncEditor *self, NMSettingVpn *s_vpn)
 			g_free (tmp);
 		}
 	}
+
+	/* Interface MTU */
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "interface_mtu_entry"));
+	value = gtk_editable_get_text (GTK_EDITABLE (widget));
+	if (value && strlen (value))
+		nm_setting_vpn_add_data_item (s_vpn, NM_VPNC_KEY_MTU, value);
+	else
+		nm_setting_vpn_remove_data_item (s_vpn, NM_VPNC_KEY_MTU);
+
+	/* Weak Authentication */
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "weak_authentication_checkbutton"));
+	if (gtk_check_button_get_active (GTK_CHECK_BUTTON (widget)))
+		nm_setting_vpn_add_data_item (s_vpn, NM_VPNC_KEY_WEAK_AUTH, "yes");
+
+	/* Weak Encryption */
+	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "weak_encryption_checkbutton"));
+	if (gtk_check_button_get_active (GTK_CHECK_BUTTON (widget)))
+		nm_setting_vpn_add_data_item (s_vpn, NM_VPNC_KEY_WEAK_ENCRYPT, "yes");
 }
 
 static void
@@ -655,6 +737,9 @@ init_plugin_ui (VpncEditor *self,
 	gtk_list_store_append (store, &iter);
 	gtk_list_store_set (store, &iter, 0, _("Netscreen"), 1, NM_VPNC_VENDOR_NETSCREEN, -1);
 
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("Fortigate"), 1, NM_VPNC_VENDOR_FORTIGATE, -1);
+
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "vendor_combo"));
 	g_return_val_if_fail (widget != NULL, FALSE);
 	gtk_combo_box_set_model (GTK_COMBO_BOX (widget), GTK_TREE_MODEL (store));
@@ -692,6 +777,21 @@ init_plugin_ui (VpncEditor *self,
 	gtk_list_store_append (store, &iter);
 	gtk_list_store_set (store, &iter, 0, _("DH Group 5"), 1, NM_VPNC_DHGROUP_DH5, -1);
 
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 14"), 1, NM_VPNC_DHGROUP_DH14, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 15"), 1, NM_VPNC_DHGROUP_DH15, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 16"), 1, NM_VPNC_DHGROUP_DH16, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 17"), 1, NM_VPNC_DHGROUP_DH17, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 18"), 1, NM_VPNC_DHGROUP_DH18, -1);
+
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "dhgroup_combo"));
 	g_return_val_if_fail (widget != NULL, FALSE);
 	gtk_combo_box_set_model (GTK_COMBO_BOX (widget), GTK_TREE_MODEL (store));
@@ -714,6 +814,22 @@ init_plugin_ui (VpncEditor *self,
 
 	gtk_list_store_append (store, &iter);
 	gtk_list_store_set (store, &iter, 0, _("DH Group 5"), 1, NM_VPNC_PFS_DH5, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 14"), 1, NM_VPNC_PFS_DH14, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 15"), 1, NM_VPNC_PFS_DH15, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 16"), 1, NM_VPNC_PFS_DH16, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 17"), 1, NM_VPNC_PFS_DH17, -1);
+
+	gtk_list_store_append (store, &iter);
+	gtk_list_store_set (store, &iter, 0, _("DH Group 18"), 1, NM_VPNC_PFS_DH18, -1);
+
 
 	widget = GTK_WIDGET (gtk_builder_get_object (priv->builder, "pfsecrecy_combo"));
 	g_return_val_if_fail (widget != NULL, FALSE);
@@ -900,9 +1016,8 @@ update_connection (NMVpnEditor *editor,
 	update_adv_settings (self, s_vpn);
 
 	str = priv->interface_name;
-	if (!str)
-		str = "";
-	g_object_set (G_OBJECT (s_con), NM_SETTING_CONNECTION_INTERFACE_NAME, str, NULL);
+	if (str && strlen (str))
+		g_object_set (G_OBJECT (s_con), NM_SETTING_CONNECTION_INTERFACE_NAME, str, NULL);
 
 	nm_connection_add_setting (connection, NM_SETTING (s_vpn));
 	return TRUE;
@@ -1015,21 +1130,3 @@ vpnc_editor_interface_init (NMVpnEditorInterface *iface)
 	iface->get_widget = get_widget;
 	iface->update_connection = update_connection;
 }
-
-/*****************************************************************************/
-
-#ifndef NM_VPN_OLD
-
-#include "nm-vpnc-editor-plugin.h"
-
-G_MODULE_EXPORT NMVpnEditor *
-nm_vpn_editor_factory_vpnc (NMVpnEditorPlugin *editor_plugin,
-                            NMConnection *connection,
-                            GError **error)
-{
-	g_return_val_if_fail (!error || !*error, NULL);
-
-	return nm_vpnc_editor_new (connection, error);
-}
-#endif
-

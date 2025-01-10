@@ -1,21 +1,52 @@
-network-manager-vpnc (1.2.8.1-4) UNRELEASED; urgency=medium
+network-manager-vpnc (1.4.0-1) unstable; urgency=medium
 
-  * update
+  * New upstream version 1.4.0
+  * Drop no longer existing --without-libnm-glib configure switch.
+    That obsolete feature has been removed completely.
+  * Replace intltools Build-Depends with gettext
+  * Drop patches, merged upstream
 
- -- Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>  Mon, 25 Jul 2022 01:40:21 -0400
+ -- Michael Biebl <biebl@debian.org>  Fri, 15 Nov 2024 15:06:51 +0100
 
-network-manager-vpnc (1.2.8.1-4) unstable; urgency=medium
+network-manager-vpnc (1.2.8-8) unstable; urgency=medium
 
-  [ donghualin ]
-  * UNRELEASED
+  * Update Homepage URL
+  * Bump Standards-Version to 4.7.0. No further changes required
+  * Replace obsolete pkg-config Build-Depends with pkgconf
 
- -- caixiangrong <caixiangrong@uniontech.com>  Mon, 25 Jul 2022 13:36:41 +0800
+ -- Michael Biebl <biebl@debian.org>  Thu, 05 Sep 2024 22:48:39 +0200
 
-network-manager-vpnc (1.2.8.1-3) unstable; urgency=medium
+network-manager-vpnc (1.2.8-7) unstable; urgency=medium
 
-  * Enable GTK 4 support
+  * Fix typo in .install file (Closes: #1054293)
 
- -- donghualin <donghualin@uniontech.com>  Wed, 22 Jun 2022 14:45:18 +0200
+ -- Michael Biebl <biebl@debian.org>  Sat, 21 Oct 2023 11:37:13 +0200
+
+network-manager-vpnc (1.2.8-6) unstable; urgency=medium
+
+  * Install helper binaries into /usr/libexec
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 20 Oct 2023 19:41:31 +0200
+
+network-manager-vpnc (1.2.8-5) unstable; urgency=medium
+
+  * Use execute_before instead of override for dh_install
+  * Add explicit Build-Depends on pkg-config.
+    Do not rely on other packages to pull in this build requirement for us.
+  * Add Build-Depends on libgtk-4-bin.
+    The gtk4-builder-tool is required during build to generate the gtk4 .ui
+    files as those are removed by the 'clean' target.
+    This addresses ftbfs-binary-after-build. (Closes: #1049793)
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 16 Aug 2023 21:56:03 +0200
+
+network-manager-vpnc (1.2.8-4) unstable; urgency=medium
+
+  * properties: Don't set interface name as empty string by default
+    (Closes: #1026082)
+  * Bump Standards-Version to 4.6.2
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 19 Dec 2022 11:03:09 +0100
 
 network-manager-vpnc (1.2.8-3) unstable; urgency=medium
 
