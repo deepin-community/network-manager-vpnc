@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: network-manager-vpnc.po.master.ta\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=NetworkManager&component=VPN: vpnc\n"
-"POT-Creation-Date: 2009-06-10 00:55+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/NetworkManager-vpnc/\n"
+"POT-Creation-Date: 2024-11-15 13:33+0100\n"
 "PO-Revision-Date: 2009-07-01 16:37+0530\n"
 "Last-Translator: I. Felix <ifelix@redhat.com>\n"
 "Language-Team: Tamil <fedora-trans-ta@redhat.com>\n"
@@ -22,101 +22,110 @@ msgstr ""
 "\n"
 "\n"
 
-#: ../auth-dialog/gnome-two-password-dialog.c:103
-msgid "_Secondary Password:"
-msgstr "இரண்டாவது கடவுச்சொல் (_S):"
+#: appdata/network-manager-vpnc.metainfo.xml.in:10
+msgid "Legacy Cisco VPNC client"
+msgstr ""
 
-#: ../auth-dialog/gnome-two-password-dialog.c:159
-msgid "_Password:"
-msgstr "(_P) கடவுச்சொல்:"
+#: appdata/network-manager-vpnc.metainfo.xml.in:11
+msgid "Client for Cisco IPsec virtual private networks"
+msgstr ""
 
-#: ../auth-dialog/gnome-two-password-dialog.c:239
-msgid "Sh_ow passwords"
-msgstr "கடவுச்சொற்களைக் காட்டு (_o)"
+#: appdata/network-manager-vpnc.metainfo.xml.in:14
+msgid "network"
+msgstr ""
 
-#: ../auth-dialog/gnome-two-password-dialog.c:299
-msgid "_Remember passwords for this session"
-msgstr "இந்த அமர்வுக்கு கடவுச்சொற்களை நினைவு கொள்ளவும் (_R)"
+#: appdata/network-manager-vpnc.metainfo.xml.in:15
+msgid "manager"
+msgstr ""
 
-#: ../auth-dialog/gnome-two-password-dialog.c:300
-msgid "_Save passwords in keyring"
-msgstr "கீரிங்கில் கடவுச்சொற்களை சேமிக்கவும் (_S)"
+#: appdata/network-manager-vpnc.metainfo.xml.in:16
+msgid "NetworkManager"
+msgstr ""
 
-#: ../auth-dialog/main.c:170
-#, c-format
-msgid "You need to authenticate to access the Virtual Private Network '%s'."
-msgstr "மெய்நிகர் தனிப்பட்ட பிணைய '%s'ஐ அணுக உங்களுக்கு அங்கீகாரம் தேவைப்படுகிறது."
+#: appdata/network-manager-vpnc.metainfo.xml.in:17
+msgid "connection"
+msgstr ""
 
-#: ../auth-dialog/main.c:171
+#: appdata/network-manager-vpnc.metainfo.xml.in:18
+msgid "VPN"
+msgstr ""
+
+#: appdata/network-manager-vpnc.metainfo.xml.in:19
+msgid "VPNC"
+msgstr ""
+
+#: appdata/network-manager-vpnc.metainfo.xml.in:20
+msgid "IPsec"
+msgstr ""
+
+#: appdata/network-manager-vpnc.metainfo.xml.in:21
+msgid "Cisco"
+msgstr ""
+
+#: appdata/network-manager-vpnc.metainfo.xml.in:25
+msgid "Support for configuring virtual private networks based on VPNC."
+msgstr ""
+
+#: appdata/network-manager-vpnc.metainfo.xml.in:26
+msgid "Compatible with Cisco VPN concentrators configured to use IPsec."
+msgstr ""
+
+#: appdata/network-manager-vpnc.metainfo.xml.in:34
+msgid "The advanced options dialog"
+msgstr ""
+
+#: appdata/network-manager-vpnc.metainfo.xml.in:43
+msgid "The NetworkManager Developers"
+msgstr ""
+
+#: auth-dialog/main.c:164 auth-dialog/main.c:223
 msgid "Authenticate VPN"
 msgstr "அங்கீகரிக்கப்பட்ட VPN"
 
-#: ../auth-dialog/main.c:175
+#: auth-dialog/main.c:178
+#, fuzzy
+#| msgid "_Password:"
+msgid "Password"
+msgstr "(_P) கடவுச்சொல்:"
+
+#: auth-dialog/main.c:186
+#, fuzzy
+#| msgid "_Group Password:"
+msgid "Group Password"
+msgstr "குழு கடவுச்சொல் (_G):"
+
+#: auth-dialog/main.c:232
 msgid "_Group Password:"
 msgstr "குழு கடவுச்சொல் (_G):"
 
-#: ../nm-vpnc.desktop.in.h:1
-msgid "Add, Remove, and Edit VPN Connections"
-msgstr "சேர், நீக்கு, மற்றும் VPN இணைப்புகளை திருத்தவும்"
+#: auth-dialog/main.c:489
+#, fuzzy, c-format
+#| msgid "You need to authenticate to access the Virtual Private Network '%s'."
+msgid "You need to authenticate to access the Virtual Private Network “%s”."
+msgstr "மெய்நிகர் தனிப்பட்ட பிணைய '%s'ஐ அணுக உங்களுக்கு அங்கீகாரம் தேவைப்படுகிறது."
 
-#: ../nm-vpnc.desktop.in.h:2
-msgid "VPN Connection Manager (vpnc)"
-msgstr "VPN இணைப்பு மேலாளர் (vpnc)"
-
-#: ../properties/nm-vpnc.c:53
+#: properties/nm-vpnc-editor-plugin.c:40
 msgid "Cisco Compatible VPN (vpnc)"
 msgstr "Cisco ஏற்ற VPN (vpnc)"
 
-#: ../properties/nm-vpnc.c:54
+#: properties/nm-vpnc-editor-plugin.c:41
 msgid ""
 "Compatible with various Cisco, Juniper, Netscreen, and Sonicwall IPsec-based "
 "VPN gateways."
-msgstr "பல்வேறு Cisco, Juniper, Netscreen, மற்றுப் Sonicwall IPsec-அடிப்படையான VPN கேட்வேகளுடன் ஏற்றது."
+msgstr ""
+"பல்வேறு Cisco, Juniper, Netscreen, மற்றுப் Sonicwall IPsec-அடிப்படையான VPN "
+"கேட்வேகளுடன் ஏற்றது."
 
-#: ../properties/nm-vpnc.c:339
-msgid "Saved"
-msgstr "சேமிக்கப்பட்டது"
-
-#: ../properties/nm-vpnc.c:346
-msgid "Always Ask"
-msgstr "எப்போதும் கேள்"
-
-#: ../properties/nm-vpnc.c:353
-msgid "Not Required"
-msgstr "தேவைப்படவில்லை"
-
-#: ../properties/nm-vpnc.c:412
-msgid "Secure (default)"
-msgstr "பாதுகாப்பு (முன்னிருப்பு)"
-
-#: ../properties/nm-vpnc.c:415
-msgid "Weak (use with caution)"
-msgstr "பலவீனம் (எச்சரிக்கையுடன் பயன்படுத்து)"
-
-#: ../properties/nm-vpnc.c:423
-msgid "None (completely insecure)"
-msgstr "ஒன்றுமில்லை (முற்றிலும் பாதுகாப்பில்லாத)"
-
-#: ../properties/nm-vpnc.c:471
-msgid "Cisco UDP (default)"
-msgstr "Cisco UDP (முன்னிருப்பு)"
-
-#: ../properties/nm-vpnc.c:478
-msgid "NAT-T"
-msgstr "NAT-T"
-
-#: ../properties/nm-vpnc.c:485
-msgid "Disabled"
-msgstr "இயலுமை நீக்கிய"
-
-#: ../properties/nm-vpnc.c:1110
-msgid "TCP tunneling not supported"
-msgstr "TCP டனலிங் துணைபுரியவில்லை"
-
-#: ../properties/nm-vpnc.c:1112
-#, c-format
+#: properties/nm-vpnc-editor-plugin.c:488
+#, fuzzy, c-format
+#| msgid ""
+#| "The VPN settings file '%s' specifies that VPN traffic should be tunneled "
+#| "through TCP which is currently not supported in the vpnc software.\n"
+#| "\n"
+#| "The connection can still be created, with TCP tunneling disabled, however "
+#| "it may not work as expected."
 msgid ""
-"The VPN settings file '%s' specifies that VPN traffic should be tunneled "
+"The VPN settings file “%s” specifies that VPN traffic should be tunneled "
 "through TCP which is currently not supported in the vpnc software.\n"
 "\n"
 "The connection can still be created, with TCP tunneling disabled, however it "
@@ -128,55 +137,512 @@ msgstr ""
 "The connection can still be created, with TCP tunneling disabled, however it "
 "may not work as expected."
 
-#: ../properties/nm-vpnc-dialog.glade.h:1
-msgid " "
-msgstr " "
+#: properties/nm-vpnc-editor.c:685
+msgid "Secure (default)"
+msgstr "பாதுகாப்பு (முன்னிருப்பு)"
 
-#: ../properties/nm-vpnc-dialog.glade.h:2
-msgid "<b>General</b>"
+#: properties/nm-vpnc-editor.c:688
+msgid "Weak (use with caution)"
+msgstr "பலவீனம் (எச்சரிக்கையுடன் பயன்படுத்து)"
+
+#: properties/nm-vpnc-editor.c:691
+msgid "None (completely insecure)"
+msgstr "ஒன்றுமில்லை (முற்றிலும் பாதுகாப்பில்லாத)"
+
+#: properties/nm-vpnc-editor.c:735
+#, fuzzy
+#| msgid "Cisco UDP (default)"
+msgid "Cisco (default)"
+msgstr "Cisco UDP (முன்னிருப்பு)"
+
+#: properties/nm-vpnc-editor.c:738
+msgid "Netscreen"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:741
+msgid "Fortigate"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:752
+msgid "NAT-T when available (default)"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:755
+msgid "NAT-T always"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:758
+#, fuzzy
+#| msgid "Cisco UDP (default)"
+msgid "Cisco UDP"
+msgstr "Cisco UDP (முன்னிருப்பு)"
+
+#: properties/nm-vpnc-editor.c:761
+msgid "Disabled"
+msgstr "இயலுமை நீக்கிய"
+
+#: properties/nm-vpnc-editor.c:772 properties/nm-vpnc-editor.c:810
+msgid "DH Group 1"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:775
+#, fuzzy
+#| msgid "Cisco UDP (default)"
+msgid "DH Group 2 (default)"
+msgstr "Cisco UDP (முன்னிருப்பு)"
+
+#: properties/nm-vpnc-editor.c:778 properties/nm-vpnc-editor.c:816
+msgid "DH Group 5"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:781 properties/nm-vpnc-editor.c:819
+msgid "DH Group 14"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:784 properties/nm-vpnc-editor.c:822
+msgid "DH Group 15"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:787 properties/nm-vpnc-editor.c:825
+msgid "DH Group 16"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:790 properties/nm-vpnc-editor.c:828
+msgid "DH Group 17"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:793 properties/nm-vpnc-editor.c:831
+msgid "DH Group 18"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:804
+#, fuzzy
+#| msgid "Secure (default)"
+msgid "Server (default)"
+msgstr "பாதுகாப்பு (முன்னிருப்பு)"
+
+#: properties/nm-vpnc-editor.c:807
+msgid "None"
+msgstr ""
+
+#: properties/nm-vpnc-editor.c:813
+msgid "DH Group 2"
+msgstr ""
+
+#: src/nm-vpnc-service.c:204
+#, c-format
+msgid "property “%s” invalid or not supported"
+msgstr ""
+
+#: src/nm-vpnc-service.c:219
+#, c-format
+msgid "property “%s” contains a newline character"
+msgstr ""
+
+#: src/nm-vpnc-service.c:231
+#, c-format
+msgid "property “%s” file path “%s” is not absolute or does not exist"
+msgstr ""
+
+#: src/nm-vpnc-service.c:244
+#, c-format
+msgid "invalid integer property “%s” or out of range [%d -> %d]"
+msgstr ""
+
+#: src/nm-vpnc-service.c:254
+#, c-format
+msgid "invalid boolean property “%s” (not yes or no)"
+msgstr ""
+
+#: src/nm-vpnc-service.c:261
+#, c-format
+msgid "unhandled property “%s” type %d"
+msgstr ""
+
+#: src/nm-vpnc-service.c:278
+msgid "No VPN configuration options."
+msgstr ""
+
+#: src/nm-vpnc-service.c:304
+msgid "No VPN secrets!"
+msgstr ""
+
+#: src/nm-vpnc-service.c:649
+msgid "Could not find vpnc binary."
+msgstr ""
+
+#: src/nm-vpnc-service.c:767
+#, c-format
+msgid "Config option “%s” invalid or unknown."
+msgstr ""
+
+#: src/nm-vpnc-service.c:802
+#, c-format
+msgid "Config option “%s” not an integer."
+msgstr ""
+
+#: src/nm-vpnc-service.c:990
+msgid "vpnc does not support interactive requests"
+msgstr ""
+
+#: src/nm-vpnc-service.c:1014
+msgid "Could not use new secrets as interactive mode is disabled."
+msgstr ""
+
+#: src/nm-vpnc-service.c:1023 src/nm-vpnc-service.c:1097
+msgid ""
+"Could not process the request because the VPN connection settings were "
+"invalid."
+msgstr ""
+
+#: src/nm-vpnc-service.c:1031
+msgid ""
+"Could not process the request because no pending authentication is required."
+msgstr ""
+
+#: src/nm-vpnc-service.c:1042
+#, c-format
+msgid ""
+"Could not process the request because the requested info “%s” was not "
+"provided."
+msgstr ""
+
+#: src/nm-vpnc-service.c:1240
+msgid "Don’t quit when VPN connection terminates"
+msgstr ""
+
+#: src/nm-vpnc-service.c:1241
+msgid "Enable verbose debug logging (may expose passwords)"
+msgstr ""
+
+#: src/nm-vpnc-service.c:1242
+msgid "D-Bus name to use for this instance"
+msgstr ""
+
+#: src/nm-vpnc-service.c:1265
+msgid ""
+"nm-vpnc-service provides integrated Cisco Legacy IPsec VPN capability to "
+"NetworkManager."
+msgstr ""
+
+#: shared/nm-utils/nm-shared-utils.c:264
+#, c-format
+msgid "object class '%s' has no property named '%s'"
+msgstr ""
+
+#: shared/nm-utils/nm-shared-utils.c:271
+#, c-format
+msgid "property '%s' of object class '%s' is not writable"
+msgstr ""
+
+#: shared/nm-utils/nm-shared-utils.c:278
+#, c-format
+msgid ""
+"construct property \"%s\" for object '%s' can't be set after construction"
+msgstr ""
+
+#: shared/nm-utils/nm-shared-utils.c:286
+#, c-format
+msgid "'%s::%s' is not a valid property name; '%s' is not a GObject subtype"
+msgstr ""
+
+#: shared/nm-utils/nm-shared-utils.c:295
+#, c-format
+msgid "unable to set property '%s' of type '%s' from value of type '%s'"
+msgstr ""
+
+#: shared/nm-utils/nm-shared-utils.c:306
+#, c-format
+msgid ""
+"value \"%s\" of type '%s' is invalid or out of range for property '%s' of "
+"type '%s'"
+msgstr ""
+
+#: shared/nm-utils/nm-vpn-plugin-utils.c:69
+#, c-format
+msgid "unable to get editor plugin name: %s"
+msgstr ""
+
+#: shared/nm-utils/nm-vpn-plugin-utils.c:103
+#, c-format
+msgid "missing plugin file \"%s\""
+msgstr ""
+
+#: shared/nm-utils/nm-vpn-plugin-utils.c:109
+#, c-format
+msgid "cannot load editor plugin: %s"
+msgstr ""
+
+#: shared/nm-utils/nm-vpn-plugin-utils.c:118
+#, c-format
+msgid "cannot load factory %s from plugin: %s"
+msgstr ""
+
+#: shared/nm-utils/nm-vpn-plugin-utils.c:144
+msgid "unknown error creating editor instance"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:19
+#, fuzzy
+#| msgid "<b>General</b>"
+msgid "General"
 msgstr "<b>பொதுவான</b>"
 
-#: ../properties/nm-vpnc-dialog.glade.h:3
-msgid "<b>Optional</b>"
-msgstr "<b>விருப்பத்திற்குரிய</b>"
-
-#: ../properties/nm-vpnc-dialog.glade.h:4
-msgid "Disable Dead _Peer Detection"
-msgstr "டெட் பீர் கண்டறிதல் செயலிழக்கப்பட்டது"
-
-#: ../properties/nm-vpnc-dialog.glade.h:5
-msgid "_Domain"
-msgstr "செயற்களம்"
-
-#: ../properties/nm-vpnc-dialog.glade.h:6
-msgid "_Encryption method"
-msgstr "மறைகுறியாக்க முறை"
-
-#: ../properties/nm-vpnc-dialog.glade.h:7
-msgid "G_roup name"
-msgstr "குழுப் பெயர் (_r)"
-
-#: ../properties/nm-vpnc-dialog.glade.h:8
-msgid "Gro_up password"
-msgstr "குழு கடவுச்சொல் (_u)"
-
-#: ../properties/nm-vpnc-dialog.glade.h:9
-msgid "_NAT traversal"
-msgstr "NAT ட்ராவர்சல்"
-
-#: ../properties/nm-vpnc-dialog.glade.h:10
-msgid "Sho_w passwords"
-msgstr "கடவுச்சொற்களைக் காட்டு"
-
-#: ../properties/nm-vpnc-dialog.glade.h:11
-msgid "User na_me"
-msgstr "பயனர் பெயர்"
-
-#: ../properties/nm-vpnc-dialog.glade.h:12
+#: properties/nm-vpnc-dialog.ui:36
 msgid "_Gateway"
 msgstr "கேட்வே (_G)"
 
-#: ../properties/nm-vpnc-dialog.glade.h:13
+#: properties/nm-vpnc-dialog.ui:49
+msgid ""
+"IP/hostname of IPsec gateway\n"
+"config: IPSec gateway <gateway>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:62
+msgid "User na_me"
+msgstr "பயனர் பெயர்"
+
+#: properties/nm-vpnc-dialog.ui:75
+msgid ""
+"User name for the connection\n"
+"config: Xauth username <user_name>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:88
 msgid "User _password"
 msgstr "பயனர் கடவுச்சொல் (_U)"
 
+#: properties/nm-vpnc-dialog.ui:101
+msgid ""
+"User password for the connection\n"
+"config: Xauth password <password>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:115
+msgid "G_roup name"
+msgstr "குழுப் பெயர் (_r)"
+
+#: properties/nm-vpnc-dialog.ui:128
+msgid ""
+"Group name\n"
+"config: IPSec ID <group_name>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:141
+msgid "Gro_up password"
+msgstr "குழு கடவுச்சொல் (_u)"
+
+#: properties/nm-vpnc-dialog.ui:154
+msgid ""
+"Group password\n"
+"config: IPSec secret <group_password>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:165
+msgid "Sho_w passwords"
+msgstr "கடவுச்சொற்களைக் காட்டு"
+
+#: properties/nm-vpnc-dialog.ui:179
+msgid "Use _hybrid authentication"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:183
+msgid ""
+"Enable hybrid authentication, i.e. use certificate in addition to password.\n"
+"config: IKE Authmode hybrid"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:237
+msgid "Advance_d…"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:358
+msgid "Advanced Options"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:375
+msgid "Advanced Properties"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:383
+msgid "_Cancel"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:391
+msgid "_Apply"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:447
+msgid "Identification"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:464
+msgid "_Domain"
+msgstr "செயற்களம்"
+
+#: properties/nm-vpnc-dialog.ui:477
+msgid ""
+"(NT-)Domain name for authentication\n"
+"config: Domain <domain>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:490
+msgid "_Vendor"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:503
+msgid ""
+"Vendor of your IPsec gateway\n"
+"config: Vendor <cisco/netscreen/fortigate>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:523
+msgid "Ve_rsion"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:535
+msgid ""
+"Application version to report. \n"
+"config: Application version <ASCII string>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:550
+msgid "Transport and Security"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:566
+msgid "Tunnel _interface name"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:578
+msgid ""
+"Tunnel interface name to use\n"
+"config: Interface name <name>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:592 properties/nm-vpnc-dialog.ui:604
+msgid "Interface MTU"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:616
+msgid "_Encryption method"
+msgstr "மறைகுறியாக்க முறை"
+
+#: properties/nm-vpnc-dialog.ui:628
+msgid ""
+"Encryption method\n"
+"config: nothing for Secure, “Enable Single DES” for Weak, “Enable no "
+"encryption” for None"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:648
+msgid "_NAT traversal"
+msgstr "NAT ட்ராவர்சல்"
+
+#: properties/nm-vpnc-dialog.ui:660
+msgid ""
+"NAT traversal method to use\n"
+"config: NAT Traversal Mode <natt/none/force-natt/cisco-udp>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:680
+msgid "_IKE DH Group"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:692
+msgid ""
+"Name of the IKE DH group\n"
+"config: IKE DH Group <dh1/dh2/dh5/dh14/dh15/dh16/dh17/dh18>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:712
+msgid "Perfect _Forward Secrecy"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:725
+msgid ""
+"Diffie-Hellman group to use for PFS\n"
+"config: Perfect Forward Secrecy <nopfs/dh1/dh2/dh5/dh14/dh15/dh16/dh17/dh18/"
+"server>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:745
+msgid "_Local port"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:757
+msgid ""
+"Local ISAKMP port to use (0 means random port; 500 is vpnc’s default)\n"
+"config: Local Port <0-65535>"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:760
+msgid "0"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:773
+msgid "Disable Dead _Peer Detection"
+msgstr "டெட் பீர் கண்டறிதல் செயலிழக்கப்பட்டது"
+
+#: properties/nm-vpnc-dialog.ui:777
+msgid ""
+"Disable sending DPD packets (sets timeout to 0)\n"
+"config: DPD idle timeout (our side) 0"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:790
+msgid "Enable weak (insecure) authentication"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:794
+msgid ""
+"Enable use of known insecure algorithms (such as MD5) for password hashing"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:806
+msgid "Enable weak (insecure) encryption"
+msgstr ""
+
+#: properties/nm-vpnc-dialog.ui:810
+msgid ""
+"Enable use of known insecure algorithms (such as DES and 3DES) for encryption"
+msgstr ""
+
+#~ msgid "_Secondary Password:"
+#~ msgstr "இரண்டாவது கடவுச்சொல் (_S):"
+
+#~ msgid "Sh_ow passwords"
+#~ msgstr "கடவுச்சொற்களைக் காட்டு (_o)"
+
+#~ msgid "_Remember passwords for this session"
+#~ msgstr "இந்த அமர்வுக்கு கடவுச்சொற்களை நினைவு கொள்ளவும் (_R)"
+
+#~ msgid "_Save passwords in keyring"
+#~ msgstr "கீரிங்கில் கடவுச்சொற்களை சேமிக்கவும் (_S)"
+
+#~ msgid "Add, Remove, and Edit VPN Connections"
+#~ msgstr "சேர், நீக்கு, மற்றும் VPN இணைப்புகளை திருத்தவும்"
+
+#~ msgid "VPN Connection Manager (vpnc)"
+#~ msgstr "VPN இணைப்பு மேலாளர் (vpnc)"
+
+#~ msgid "Saved"
+#~ msgstr "சேமிக்கப்பட்டது"
+
+#~ msgid "Always Ask"
+#~ msgstr "எப்போதும் கேள்"
+
+#~ msgid "Not Required"
+#~ msgstr "தேவைப்படவில்லை"
+
+#~ msgid "NAT-T"
+#~ msgstr "NAT-T"
+
+#~ msgid "TCP tunneling not supported"
+#~ msgstr "TCP டனலிங் துணைபுரியவில்லை"
+
+#~ msgid " "
+#~ msgstr " "
+
+#~ msgid "<b>Optional</b>"
+#~ msgstr "<b>விருப்பத்திற்குரிய</b>"

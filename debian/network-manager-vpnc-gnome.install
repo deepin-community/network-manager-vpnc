@@ -1,4 +1,4 @@
-usr/lib/*/NetworkManager/libnm-vpn-plugin-vpnc-editor.so
+usr/libexec/nm-vpnc-auth-dialog
 usr/lib/*/NetworkManager/libnm-gtk4-vpn-plugin-vpnc-editor.so
-usr/lib/NetworkManager/nm-vpnc-auth-dialog
+usr/lib/*/NetworkManager/libnm-vpn-plugin-vpnc-editor.so
 usr/share/metainfo/network-manager-vpnc.metainfo.xml
